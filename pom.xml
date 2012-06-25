@@ -5,7 +5,7 @@
 
 	<groupId>de.codecentric</groupId>
 	<artifactId>jackson-module-jettison</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.5</version>
 
 	<name>jackson-module-jettison</name>
 	<packaging>jar</packaging>
