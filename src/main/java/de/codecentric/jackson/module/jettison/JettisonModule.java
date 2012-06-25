@@ -1,14 +1,16 @@
 package de.codecentric.jackson.module.jettison;
 
-import org.codehaus.jackson.Version;
-import org.codehaus.jackson.map.module.SimpleModule;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONObject;
+
+import com.fasterxml.jackson.core.Version;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 
 public class JettisonModule extends SimpleModule {
     private final static String NAME = "JettisonModule";
 
-    private final static Version VERSION = new Version(0, 0, 1, null);
+    private final static Version VERSION = new Version(0, 0, 1, null, "de.codecentric",
+	    "jackson-module-jettison");
 
     public JettisonModule() {
 	super(NAME, VERSION);

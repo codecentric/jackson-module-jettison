@@ -4,16 +4,17 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.Iterator;
 
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.JsonGenerator;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.SerializationConfig;
-import org.codehaus.jackson.map.SerializerProvider;
-import org.codehaus.jackson.map.TypeSerializer;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
+
+import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.jsontype.TypeSerializer;
 
 public class JSONObjectSerializer extends JSONBaseSerializer<JSONObject> {
     public final static JSONObjectSerializer instance = new JSONObjectSerializer();
@@ -57,7 +58,7 @@ public class JSONObjectSerializer extends JSONBaseSerializer<JSONObject> {
 		throw new JsonGenerationException(e);
 	    }
 	    if (ob == null || ob == JSONObject.NULL) {
-		if (provider.isEnabled(SerializationConfig.Feature.WRITE_NULL_MAP_VALUES)) {
+		if (provider.isEnabled(SerializationFeature.WRITE_NULL_MAP_VALUES)) {
 		    jgen.writeNullField(key);
 		}
 		continue;

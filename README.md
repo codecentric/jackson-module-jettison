@@ -18,3 +18,8 @@ Servers will pick it up automatically, clients will need to something like this:
 	clientConfig = new DefaultClientConfig();
 	clientConfig.getClasses().add(JettisonJacksonMapperProvider.class);
 	clientConfig.getClasses().add(JacksonJsonProvider.class);
+
+Compatibility
+=============
+Since Version 0.3 the module requires jackson 2.0.
+Jackson 1.9.x users should use 0.2 20725a8f696ba8966dac10bf275cc24f98091b80

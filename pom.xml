@@ -5,7 +5,7 @@
 
 	<groupId>de.codecentric</groupId>
 	<artifactId>jackson-module-jettison</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 
 	<name>jackson-module-jettison</name>
 	<packaging>jar</packaging>
@@ -16,10 +16,15 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.2</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.0.0</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jettison</groupId>

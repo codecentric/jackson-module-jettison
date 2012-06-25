@@ -3,7 +3,7 @@ package de.codecentric.jackson.module.jettison;
 import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;
 
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Provider
 public class JettisonJacksonMapperProvider implements ContextResolver<ObjectMapper> {
