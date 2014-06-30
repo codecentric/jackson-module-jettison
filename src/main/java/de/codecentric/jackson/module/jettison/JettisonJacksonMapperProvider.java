@@ -9,16 +9,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Provider
 public class JettisonJacksonMapperProvider implements ContextResolver<ObjectMapper> {
 
-    private final ObjectMapper mapper;
+  private final ObjectMapper mapper;
 
-    public JettisonJacksonMapperProvider() {
-	mapper = new ObjectMapper();
-	mapper.setSerializationInclusion(Include.ALWAYS);
-	mapper.registerModule(new JettisonModule());
-    }
+  public JettisonJacksonMapperProvider() {
+    mapper = new ObjectMapper();
+    mapper.setSerializationInclusion(Include.ALWAYS);
+    mapper.registerModule(new JettisonModule());
+  }
 
-    @Override
-    public ObjectMapper getContext(Class<?> type) {
-	return mapper;
-    }
+  @Override
+  public ObjectMapper getContext(Class<?> type) {
+    return mapper;
+  }
 }

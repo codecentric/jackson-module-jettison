@@ -21,5 +21,6 @@ Servers will pick it up automatically, clients will need to something like this:
 
 Compatibility
 =============
-Since Version 0.0.3 the module requires jackson 2.0.
-Jackson 1.9.x users should use 0.0.2 20725a8f696ba8966dac10bf275cc24f98091b80
+* Since Version 0.0.8 the module requires jackson 2.4.
+* Since Version 0.0.3 the module requires jackson 2.0.
+* Jackson 1.9.x users should use 0.0.2 20725a8f696ba8966dac10bf275cc24f98091b80
